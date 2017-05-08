@@ -10,6 +10,11 @@ export default ({ config, db }) => {
 
 	// perhaps expose some API metadata at the root
 	api.get('/', (req, res) => {
+		console.log(req);
+		res.json({ version });
+	});
+	api.post('/', (req, res) => {
+		console.log(req);
 		res.json({ version });
 	});
 
